@@ -29,9 +29,9 @@ print(f"vocab size: {vocab_size:,}")
 # create a mapping from characters to integers
 stoi = { ch:i for i,ch in enumerate(chars) }
 itos = { i:ch for i,ch in enumerate(chars) }
-def encode(s):
+fn encode(s):
     return [stoi[c] for c in s] # encoder: take a string, output a list of integers
-def decode(l):
+fn decode(l):
     return ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string
 
 # create the train and test splits
